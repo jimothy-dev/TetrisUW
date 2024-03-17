@@ -1,4 +1,4 @@
-package view.menu;
+package playGame.menu;
 
 import java.awt.event.KeyEvent;
 import javax.swing.JMenu;
@@ -7,7 +7,7 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import model.Board;
-import view.controller.TetrisGUI;
+import playGame.TetrisGUI;
 
 
 /**

@@ -1,4 +1,4 @@
-package view.layout;
+package playGame.layout;
 
 import static javax.sound.sampled.AudioSystem.getAudioInputStream;
 import static model.Board.PROPERTY_GAME_OVER;

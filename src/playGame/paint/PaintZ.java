@@ -1,4 +1,4 @@
-package view.paint;
+package playGame.paint;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -12,16 +12,15 @@ import model.Rotation;
  * @author James Simpson jsimp33@uw.edu
  * @version 3.0
  */
-public final class PaintI implements PaintTetromino {
+public final class PaintZ implements PaintTetromino {
 
     /**
      * Private constructor to prevent instantiation of this utility class.
      *
      * @throws AssertionError (if instantiation is attempted)
      */
-    private PaintI() {
+    private PaintZ() {
         super();
-
         throw new AssertionError("Utility classes cannot be instantiated");
     }
 
@@ -34,7 +33,7 @@ public final class PaintI implements PaintTetromino {
      * @param theY the y coordinate.
      * @param theRotation the rotation of the tetris piece.
      */
-    public static void createIShape(final Graphics2D theG2d, final int theBlockHeight,
+    public static void createZShape(final Graphics2D theG2d, final int theBlockHeight,
                                     final int theY, final int theX,
                                     final Rotation theRotation) {
         switch (theRotation) {
@@ -59,17 +58,20 @@ public final class PaintI implements PaintTetromino {
      * @param theY the y coordinate.
      */
     private static void rotation0(final Graphics2D theG2d, final int theBlockHeight,
-                          final int theY, final int theX) {
+                                 final int theY, final int theX) {
         final Shape tetrisBlock1 = new Rectangle2D.Double(theX, theY,
                 theBlockHeight, theBlockHeight);
-        final Shape tetrisBlock2 = new Rectangle2D.Double(theX + theBlockHeight, theY,
+        final Shape tetrisBlock2 = new Rectangle2D.Double(
+                theX + theBlockHeight, theY,
                 theBlockHeight, theBlockHeight);
-        final Shape tetrisBlock3 = new Rectangle2D.Double(theX + 2 * theBlockHeight, theY,
+        final Shape tetrisBlock3 = new Rectangle2D.Double(
+                theX + theBlockHeight, theY + theBlockHeight,
                 theBlockHeight, theBlockHeight);
-        final Shape tetrisBlock4 = new Rectangle2D.Double(theX + 3 * theBlockHeight, theY,
+        final Shape tetrisBlock4 = new Rectangle2D.Double(
+                theX + 2 * theBlockHeight, theY + theBlockHeight,
                 theBlockHeight, theBlockHeight);
 
-        theG2d.setPaint(Color.CYAN);
+        theG2d.setPaint(Color.RED);
         PaintTetromino.paintShape(theG2d, tetrisBlock1,
                 tetrisBlock2, tetrisBlock3, tetrisBlock4);
     }
@@ -83,21 +85,21 @@ public final class PaintI implements PaintTetromino {
      * @param theY the y coordinate.
      */
     private static void rotation90(final Graphics2D theG2d, final int theBlockHeight,
-                           final int theY, final int theX) {
+                                  final int theY, final int theX) {
         final Shape tetrisBlock1 = new Rectangle2D.Double(
-                theX + 2 * theBlockHeight, theY + 2 * theBlockHeight,
+                theX + theBlockHeight * 2, theY,
                 theBlockHeight, theBlockHeight);
         final Shape tetrisBlock2 = new Rectangle2D.Double(
-                theX + 2 * theBlockHeight, theY + theBlockHeight,
+                theX + theBlockHeight, theY + theBlockHeight,
                 theBlockHeight, theBlockHeight);
         final Shape tetrisBlock3 = new Rectangle2D.Double(
-                theX + 2 * theBlockHeight, theY,
+                theX + theBlockHeight, theY + theBlockHeight * 2,
                 theBlockHeight, theBlockHeight);
         final Shape tetrisBlock4 = new Rectangle2D.Double(
-                theX + 2 * theBlockHeight, theY - theBlockHeight,
+                theX + 2 * theBlockHeight, theY + theBlockHeight,
                 theBlockHeight, theBlockHeight);
 
-        theG2d.setPaint(Color.CYAN);
+        theG2d.setPaint(Color.RED);
         PaintTetromino.paintShape(theG2d, tetrisBlock1,
                 tetrisBlock2, tetrisBlock3, tetrisBlock4);
     }
@@ -111,17 +113,21 @@ public final class PaintI implements PaintTetromino {
      * @param theY the y coordinate.
      */
     private static void rotation180(final Graphics2D theG2d, final int theBlockHeight,
-                            final int theY, final int theX) {
-        final Shape tetrisBlock1 = new Rectangle2D.Double(theX, theY - 1,
+                                   final int theY, final int theX) {
+        final Shape tetrisBlock1 = new Rectangle2D.Double(
+                theX, theY + theBlockHeight,
                 theBlockHeight, theBlockHeight);
-        final Shape tetrisBlock2 = new Rectangle2D.Double(theX + theBlockHeight, theY - 1,
+        final Shape tetrisBlock2 = new Rectangle2D.Double(
+                theX + theBlockHeight, theY + theBlockHeight,
                 theBlockHeight, theBlockHeight);
-        final Shape tetrisBlock3 = new Rectangle2D.Double(theX + 2 * theBlockHeight, theY - 1,
+        final Shape tetrisBlock3 = new Rectangle2D.Double(
+                theX + theBlockHeight, theY + theBlockHeight * 2,
                 theBlockHeight, theBlockHeight);
-        final Shape tetrisBlock4 = new Rectangle2D.Double(theX + 3 * theBlockHeight, theY - 1,
+        final Shape tetrisBlock4 = new Rectangle2D.Double(
+                theX + 2 * theBlockHeight, theY + theBlockHeight * 2,
                 theBlockHeight, theBlockHeight);
 
-        theG2d.setPaint(Color.CYAN);
+        theG2d.setPaint(Color.RED);
         PaintTetromino.paintShape(theG2d, tetrisBlock1,
                 tetrisBlock2, tetrisBlock3, tetrisBlock4);
     }
@@ -135,21 +141,21 @@ public final class PaintI implements PaintTetromino {
      * @param theY the y coordinate.
      */
     private static void rotation270(final Graphics2D theG2d, final int theBlockHeight,
-                            final int theY, final int theX) {
+                                   final int theY, final int theX) {
         final Shape tetrisBlock1 = new Rectangle2D.Double(
-                theX + theBlockHeight, theY + 2 * theBlockHeight,
+                theX + theBlockHeight, theY,
                 theBlockHeight, theBlockHeight);
         final Shape tetrisBlock2 = new Rectangle2D.Double(
                 theX + theBlockHeight, theY + theBlockHeight,
                 theBlockHeight, theBlockHeight);
         final Shape tetrisBlock3 = new Rectangle2D.Double(
-                theX + theBlockHeight, theY,
+                theX, theY + theBlockHeight * 2,
                 theBlockHeight, theBlockHeight);
         final Shape tetrisBlock4 = new Rectangle2D.Double(
-                theX + theBlockHeight, theY - theBlockHeight,
+                theX, theY + theBlockHeight,
                 theBlockHeight, theBlockHeight);
 
-        theG2d.setPaint(Color.CYAN);
+        theG2d.setPaint(Color.RED);
         PaintTetromino.paintShape(theG2d, tetrisBlock1,
                 tetrisBlock2, tetrisBlock3, tetrisBlock4);
     }

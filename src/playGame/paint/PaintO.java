@@ -1,4 +1,4 @@
-package view.paint;
+package playGame.paint;
 
 import java.awt.Color;
 import java.awt.Graphics2D;

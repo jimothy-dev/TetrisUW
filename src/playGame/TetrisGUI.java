@@ -1,4 +1,4 @@
-package view.controller;
+package playGame;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -12,11 +12,11 @@ import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 import model.Board;
 import model.MyDifficultyChanger;
-import view.layout.GamePanel;
-import view.layout.MainPanel;
-import view.layout.NextPiecePanel;
-import view.layout.ScorePanel;
-import view.menu.Menu;
+import playGame.layout.GamePanel;
+import playGame.layout.MainPanel;
+import playGame.layout.NextPiecePanel;
+import playGame.layout.ScorePanel;
+import playGame.menu.Menu;
 
 
 /**

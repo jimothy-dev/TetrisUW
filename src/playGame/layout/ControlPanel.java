@@ -1,4 +1,4 @@
-package view.layout;
+package playGame.layout;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

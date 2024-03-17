@@ -1,4 +1,4 @@
-package view.layout;
+package playGame.layout;
 
 import static model.Board.PROPERTY_ROW_CLEARED;
 import static model.Board.PROPERTY_NEXT_PIECE_CHANGES;

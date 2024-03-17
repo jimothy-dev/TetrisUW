@@ -1,15 +1,15 @@
-package view.layout;
+package playGame.layout;
 
 import static model.Board.PROPERTY_CURRENT_PIECE_CHANGES;
 import static model.Board.PROPERTY_PIECE_ROTATES;
 import static model.MyBoard.PROPERTY_FROZEN_PIECE;
-import static view.paint.PaintI.createIShape;
-import static view.paint.PaintJ.createJShape;
-import static view.paint.PaintL.createLShape;
-import static view.paint.PaintO.createOShape;
-import static view.paint.PaintS.createSShape;
-import static view.paint.PaintT.createTShape;
-import static view.paint.PaintZ.createZShape;
+import static playGame.paint.PaintI.createIShape;
+import static playGame.paint.PaintJ.createJShape;
+import static playGame.paint.PaintL.createLShape;
+import static playGame.paint.PaintO.createOShape;
+import static playGame.paint.PaintS.createSShape;
+import static playGame.paint.PaintT.createTShape;
+import static playGame.paint.PaintZ.createZShape;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
